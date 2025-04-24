@@ -2,119 +2,180 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 
 import ContactCTA from '../components/ContactCTA.astro';
-import Hero from '../components/Hero.astro';
+import Icon from '../components/Icon.astro';
+import Pill from '../components/Pill.astro';
 ---
 
-<BaseLayout title="About | Jeanine White" description="About Jeanine White Lorem Ipsum">
-	<div class="stack gap-20">
-		<main class="wrapper about">
-			<Hero
-				title="About"
-				tagline="Thanks for stopping by. Read below to learn more about myself and my background."
-			>
-				<img
-					width="1553"
-					height="873"
-					src="/assets/at-work.jpg"
-					alt="Jeanine White at work with a colleague"
-				/>
-			</Hero>
+<BaseLayout title="About | Athénaïs" description="About Athénaïs">
+	<section class="hero">
+		<div class="hero-content">
+			<h1>About me</h1>
+			<p>Thanks for stopping by. Here's a glimpse into my story.</p>
+		</div>
+	</section>
 
-			<section>
-				<h2 class="section-title">Background</h2>
-				<div class="content">
-					<p>
-						Lorem ipsum dolor sit amet, <a href="https://astro.build/">Astro</a> makes people happy.
-						Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Proin nibh nisl condimentum
-						id venenatis a condimentum vitae. Dapibus ultrices in iaculis nunc. Arcu odio ut sem nulla
-						pharetra diam sit amet. Diam quis enim lobortis scelerisque fermentum dui faucibus in ornare.
-					</p>
-					<p>
-						Arcu dui vivamus arcu felis bibendum ut tristique et egestas. Eget gravida cum sociis
-						natoque penatibus. Cras fermentum odio eu feugiat pretium nibh. Proin nibh nisl
-						condimentum id venenatis. Porta nibh venenatis cras sed felis eget velit. Id diam vel
-						quam elementum pulvinar etiam non.
-					</p>
-					<p>
-						Ultrices tincidunt arcu non sodales neque sodales ut. Sed enim ut sem viverra aliquet
-						eget sit amet. Lacus luctus accumsan tortor posuere ac ut consequat semper viverra.
-						Viverra accumsan in nisl nisi scelerisque eu ultrices. In massa tempor nec feugiat nisl
-						pretium fusce.
-					</p>
-				</div>
-			</section>
-			<section>
-				<h2 class="section-title">Education</h2>
-				<div class="content">
-					<p>Corporis voluptates tenetur laudantium.</p>
-				</div>
-			</section>
-			<section>
-				<h2 class="section-title">Skills</h2>
-				<div class="content">
-					<p>officia unde omnis</p>
-				</div>
-			</section>
-		</main>
+	<main class="about-main">
 
-		<ContactCTA />
-	</div>
+		<section class="py-xl">
+			<div class="about-container">
+				<div class="content-block">
+					<br>
+					<br>
+					<p>
+						I grew up in a bicultural French and Russian world, filled with kindness, creativity and a deep curiosity. From an early age, I was drawn to learning—reading and writing fluently in kindergarten and later being identified as HPI (high intellectual potential) in primary school. This led me to skip two grades, and by the time I was nine, I entered a semi-professional rhythmic gymnastics center in Strasbourg, where my life became a cycle of discipline and competition, making me, at times, hate the sport I loved.
+					</p>
+					<br>
+					<p>
+						For five years, I dedicated myself entirely to the sport, winning multiple championships, including an international tournament and five national titles. But despite my success, reality set in. During middle school, I faced discrimination based on my ethnicity, and though I received offers to continue training in other countries, moving abroad on short notice wasn’t possible. I also had to confront a hard truth—even if I reached the European Championships and eventually the Worlds, there was no future for me in the sport. Women’s rhythmic gymnastics had little funding, no long-term prospects, and no real way to make a living from it. So, I made one of the toughest decisions of my life: I walked away.
+					</p>
+					<br>
+					<p>
+						For the first time, I experienced life outside of elite sports. In high school, I channeled my energy into new challenges, throwing myself into an innovative youth literature project, which I launched through participatory financing. At the same time, I was accepted into Sciences Po Paris, and my world expanded in unexpected ways. During my exchange year in Canada, I stumbled upon something I did not expect to take such a huge place in my life and my self: boxing. Training in an old-school club, I found a new kind of discipline—one rooted in strategy, raw intensity, and mental resilience.
+					</p>
+					<br>
+					<p>
+						Six months ago, I also discovered a deep passion for League of Legends, drawn to its complexity and the endless room for mastery in strategical and mechanical skills. And after earning my Bachelor's degree, I knew I wanted to build something meaningful—something of my own. That’s what led me to programming. I chose Zone01 for its collaborative, hands-on approach—learning through doing, surrounded by people who are just as driven as I am.
+                    	Now, six months into this journey, I feel ready to take what I’ve learned—not just the technical skills, but the resilience, adaptability, and problem-solving mindset I’ve developed—and apply it to concrete projects. I want what I build to help other people.
+					</p>
+				</div>
+
+				<div>
+					<h2>Education</h2>
+					<ul>
+						<li><strong>2021 - 2024:</strong> Bachelor's Degree at Sciences Po Paris, Paris, FRA</li>
+						<li><strong>Nov 2022</strong> TOEFL iBT Certification - English C2 level</li>
+						<li><strong>2023 - 2024:</strong> University Exchange at Queen’s University, Kingston, CA</li>
+						<li><strong>2024 - 2027:</strong> RNCP 6 - Full Stack Developper at Zone01, Rouen, FRA</li>
+					</ul>
+				</div>
+
+				<div>
+					<h2>Programming languages I used so far</h2>
+					<ul class="space-y-3">
+						<li><code class="text-sm">Go</code> — Backend Development</li>
+						<li><code class="text-sm">JavaScript (HTML/CSS)</code> — Frontend & Game Development</li>
+						<li><code class="text-sm">Rust</code> — Systems Programming</li>
+						<li><code class="text-sm">Python</code> — Scripting & AI</li>
+						<li><code class="text-sm">SQL/PostgreSQL</code> — Database Management</li>
+						<li><code class="text-sm">Figma</code> — UI/UX Design</li>
+						<li><code class="text-sm">Gimp & Notion</code> — Graphics & Productivity</li>
+					</ul>
+				</div>
+
+				<div>
+					<h2>Let's Connect</h2>
+					<ul>
+						<li><strong>Email:</strong> athenais.klp@gmail.com</li>
+						<li><strong>Phone:</strong> +33 6 27 24 08 32</li>
+						<li><strong>GitHub:</strong> <a href="https://github.com/Kindroky" class="text-accent">github.com/Kindroky</a></li>
+						<li><strong>LinkedIn:</strong> <a href="https://shorturl.at/zPYhO" class="text-accent">shorturl.at/zPYhO</a></li>
+					</ul>
+				</div>
+				<br>
+			</div>
+		</section>
+	</main>
+	<ContactCTA />
 </BaseLayout>
 
 <style>
-	.about {
-		display: flex;
-		flex-direction: column;
-		gap: 3.5rem;
-	}
+.hero {
+	position: relative;
+	height: 20vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	overflow: hidden;
+	text-align: center;
+}
 
-	img {
-		margin-top: 1.5rem;
-		border-radius: 1.5rem;
-		box-shadow: var(--shadow-md);
-	}
+.hero-background {
+	position: absolute;
+	inset: 0;
+	z-index: 0;
+	overflow: hidden;
+}
 
-	section {
-		display: flex;
-		flex-direction: column;
-		gap: 0.5rem;
-		color: var(--gray-200);
-	}
+.hero-image {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
 
-	.section-title {
-		grid-column-start: 1;
-		font-size: var(--text-xl);
-		color: var(--gray-0);
-	}
+.hero-overlay {
+	position: absolute;
+	inset: 0;
+	background: var(--gradient-subtle);
+	opacity: 0.65;
+}
 
-	.content {
-		grid-column: 2 / 4;
-	}
+.hero-content {
+	position: relative;
+	z-index: 10;
+	color: var(--gray-0);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 1rem;
+}
 
-	.content :global(a) {
-		text-decoration: 1px solid underline transparent;
-		text-underline-offset: 0.25em;
-		transition: text-decoration-color var(--theme-transition);
-	}
+.hero-content h1 {
+	font-size: var(--text-5xl);
+	color: var(--gray-0);
+}
 
-	.content :global(a:hover),
-	.content :global(a:focus) {
-		text-decoration-color: currentColor;
-	}
+.hero-content p {
+	font-size: var(--text-lg);
+	color: var(--gray-100);
+}
 
-	@media (min-width: 50em) {
-		.about {
-			display: grid;
-			grid-template-columns: 1fr 60% 1fr;
-		}
+.about-main {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 5rem;
+}
 
-		.about > :global(:first-child) {
-			grid-column-start: 2;
-		}
+.roles {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	gap: 1rem;
+	margin-top: 2rem;
+	margin-bottom: 3rem;
+}
 
-		section {
-			display: contents;
-			font-size: var(--text-lg);
-		}
-	}
+.about-container {
+	width: 100%;
+	max-width: 75rem;
+	padding-inline: 2rem;
+	margin-inline: auto;
+	display: flex;
+	flex-direction: column;
+	gap: 5rem;
+}
+
+.content-block h2 {
+	font-size: var(--text-4xl);
+	margin-bottom: 1.5rem;
+	color: var(--gray-100);
+	text-align: center;
+}
+
+.content-block p,
+.content-block ul {
+	font-size: var(--text-md);
+	color: var(--gray-200);
+	line-height: 1.75;
+	text-align: center;
+}
+
+.content-block ul {
+	list-style: none;
+	padding: 0;
+}
+
+.content-block ul li {
+	margin-bottom: 1rem;
+}
 </style>
