@@ -1,72 +1,104 @@
 ---
+// SkillBox.astro
 import Icon from './Icon.astro';
 ---
 
 <section class="box skills">
-	<div class="stack gap-0.5 lg:gap-2">
-		<Icon icon="sun" color="var(--accent-regular)" size="1.5rem" />
-		<h2>Strong-willed</h2>
-		<p>I thrive on difficulty. Whether it’s mastering a new language, solving complex bugs, or pushing my limits, I stay focused, consistent, and relentless.</p>
+	<div class="skill-item zig-up">
+		<div class="skill-title">
+			<Icon icon="sun" color="var(--accent-light)" size="3rem" />
+			<h2>Strong-willed</h2>
+		</div>
+		<p>
+			I find meaning in difficulty. What matters most to me is facing adversity with dignity — and keeping a piece of it with me.
+	</p>
+		</p>
 	</div>
-	<div class="stack gap-2 lg:gap-4">
-		<Icon icon="pencil-line" color="var(--accent-regular)" size="1.5rem"  />
-		<h2>Creative Thinker</h2>
-		<p>I bring ideas to life through design, code, and storytelling. I see patterns others miss and craft experiences that are both intuitive and original.</p>
+
+	<div class="skill-item zig-down">
+		<div class="skill-title">
+			<Icon icon="pencil-line" color="var(--accent-light)" size="3rem" />
+			<h2>Creative Thinker</h2>
+		</div>
+		<p>
+			I enjoy connecting ideas in unexpected ways. Whether I’m designing, coding, or just exploring a concept, I try to see things from different angles.
+	</p>
+		</p>
 	</div>
-	<div class="stack gap-2 lg:gap-4">
-		<Icon icon="strategy" color="var(--accent-regular)" size="1.5rem"  />
-		<h2>Analytical Problem Solver</h2>
-		<p>Every challenge is a puzzle. I break down complexity, ask the right questions, and find solutions that are simple, scalable, and smart.</p>
+
+	<div class="skill-item zig-up">
+		<div class="skill-title">
+			<Icon icon="strategy" color="var(--accent-light)" size="3rem" />
+			<h2>Problem Solver</h2>
+		</div>
+		<p>
+			When something doesn’t work, I don’t get discouraged — I get curious. I take time to understand the problem, and look for honest, simple answers.
+		</p>
 	</div>
-	<div class="stack gap-2 lg:gap-4">
-		<Icon icon="rocket-launch" color="var(--accent-regular)" size="1.5rem"  />
-		<h2>Relentlessly Curious</h2>
-		<p>I learn fast, dig deep, and never stop improving. What drives me isn’t just finishing — it’s mastering, refining, and pushing beyond what’s expected.</p>
+
+	<div class="skill-item zig-down">
+		<div class="skill-title">
+			<Icon icon="rocket-launch" color="var(--accent-light)" size="3rem" />
+			<h2>Curious</h2>
+		</div>
+		<p>
+			I’m naturally curious, always looking to learn. Growth comes from staying open-minded, and showing up — even when it’s hard.
+		</p>
 	</div>
 </section>
 
-
 <style>
-	.box {
+.box {
 	border: 1px solid var(--gray-100);
-	border-radius: 0.75rem;
-	padding: 1.5
-	
-	
-	rem;
-	background-color: hsla(var(--gray-100));
+	border-radius: 1.5rem;
+	padding: 2.5rem;
+	background-color: hsla(240, 53%, 19%, 0.7);
 	box-shadow: var(--shadow-sm);
-	}
+	backdrop-filter: blur(6px);
+}
 
-	.skills {
-		display: flex;
-		flex-direction: column;
-		gap: 3rem;
-	}
+.skills {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 2rem;
+}
 
-	.skills h2 {
-		font-size: var(--text-lg);
-	}
+.skill-item {
+	margin: 0;
+	flex-grow: 1;
+	max-width: 28ch;
+	justify-content: flex-start;
+	align-items: flex-start;
+	gap: 1rem;
+	height: 100%; /* ensures equal height grid cells */
+}
 
-	.skills p {
-		color: var(--gray-999);
-	}
+.skill-title {
+	display: flex;
+	align-items: center;
+	gap: 0.75rem;
+	padding-bottom: 0.5rem;	
+	min-height: 3rem; /* ensures all rows reserve same height for title+icon */
+}
 
+.skill-title h2 {
+	font-size: var(--text-xl);
+	color: rgba(253, 194, 203, 0.918);
+	margin: 0;
+}
 
-	@media (min-width: 50em) {
-		.box {
-			border-radius: 1.5rem;
-			padding: 2.5rem;
-		}
+.skills p {
+	color: var(--gray-100);
+	font-size: var(--text-md);
+	line-height: 1.6;
+}
 
-		.skills {
-			display: grid;
-			grid-template-columns: repeat(3, 1fr);
-			gap: 5rem;
-		}
+/* Zigzag effect */
+.zig-up {
+	transform: translateY(22px);
+}
 
-		.skills h2 {
-			font-size: var(--text-2xl);
-		}
-	}
+.zig-down {
+	transform: translateY(-22px);
+}
 </style>

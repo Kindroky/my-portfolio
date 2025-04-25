@@ -26,9 +26,11 @@ const isCurrentPage = (href: string) => {
 <nav>
 	<div class="menu-header">
 		<a href="/" class="site-title">
-			<img src="/assets/favicon.svg" alt="Logo" width="44" height="44" style="margin-right: 0.5rem;" />
-			Athénaïs
-		</a>		
+			<div class="logo-wrapper">
+				<img src="/assets/favicon.svg" alt="Logo" width="64" height="64" />
+			</div>
+			&nbsp Athénaïs
+		</a>			
 		<menu-button>
 			<template>
 				<button class="menu-button" aria-expanded="false">
@@ -135,14 +137,14 @@ const isCurrentPage = (href: string) => {
 		position: relative;
 		font-family: var(--font-brand);
 		font-weight: 500;
-		margin-bottom: 3.5rem;
+		margin-bottom: 2rem;
 	}
 
 	.menu-header {
 		display: flex;
 		justify-content: space-between;
 		gap: 0.5rem;
-		padding: 1.5rem;
+		padding: 0.5rem;
 	}
 
 	.site-title {
@@ -207,8 +209,9 @@ const isCurrentPage = (href: string) => {
 
 	.link {
 		display: inline-block;
-		color: var(--gray-200);
+		color: var(--gray-100);
 		text-decoration: none;
+		font-size: 16px;
 	}
 
 	.link[aria-current] {
@@ -248,12 +251,6 @@ const isCurrentPage = (href: string) => {
 		color: var(--accent-text-over);
 	}
 
-	.theme-toggle {
-		display: flex;
-		align-items: center;
-		height: calc(var(--icon-size) + 2 * var(--icon-padding));
-	}
-
 	@media (min-width: 50em) {
 		nav {
 			display: grid;
@@ -266,6 +263,15 @@ const isCurrentPage = (href: string) => {
 		.menu-header {
 			padding: 0;
 		}
+		.logo-wrapper {
+			background: linear-gradient(135deg, rgba(196, 137, 252, 0.514), rgba(132, 120, 241, 0.466));
+			padding: 0.2rem;
+			border-radius: 1rem;
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+		}
+
 
 		.site-title {
 			font-size: var(--text-lg);

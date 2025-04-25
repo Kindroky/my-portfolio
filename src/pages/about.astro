@@ -39,40 +39,53 @@ import Pill from '../components/Pill.astro';
 					</p>
 				</div>
 
-				<div>
-					<h2>Education</h2>
-					<ul>
-						<li><strong>2021 - 2024:</strong> Bachelor's Degree at Sciences Po Paris, Paris, FRA</li>
-						<li><strong>Nov 2022</strong> TOEFL iBT Certification - English C2 level</li>
-						<li><strong>2023 - 2024:</strong> University Exchange at Queen’s University, Kingston, CA</li>
-						<li><strong>2024 - 2027:</strong> RNCP 6 - Full Stack Developper at Zone01, Rouen, FRA</li>
-					</ul>
-				</div>
-
-				<div>
-					<h2>Programming languages I used so far</h2>
-					<ul class="space-y-3">
-						<li><code class="text-sm">Go</code> — Backend Development</li>
-						<li><code class="text-sm">JavaScript (HTML/CSS)</code> — Frontend & Game Development</li>
-						<li><code class="text-sm">Rust</code> — Systems Programming</li>
-						<li><code class="text-sm">Python</code> — Scripting & AI</li>
-						<li><code class="text-sm">SQL/PostgreSQL</code> — Database Management</li>
-						<li><code class="text-sm">Figma</code> — UI/UX Design</li>
-						<li><code class="text-sm">Gimp & Notion</code> — Graphics & Productivity</li>
-					</ul>
-				</div>
-
-				<div>
-					<h2>Let's Connect</h2>
-					<ul>
-						<li><strong>Email:</strong> athenais.klp@gmail.com</li>
-						<li><strong>Phone:</strong> +33 6 27 24 08 32</li>
-						<li><strong>GitHub:</strong> <a href="https://github.com/Kindroky" class="text-accent">github.com/Kindroky</a></li>
-						<li><strong>LinkedIn:</strong> <a href="https://shorturl.at/zPYhO" class="text-accent">shorturl.at/zPYhO</a></li>
-					</ul>
-				</div>
-				<br>
-			</div>
+				
+				<section class="skills-box">
+					<div class="grid-box">
+					<div class="grid-section">
+						<h2>🎓 Education</h2>
+						<ul class="edu-list">
+						<li><strong>2021 - 2024:</strong> Bachelor's at Sciences Po Paris</li>
+						<li><strong>Nov 2022:</strong> TOEFL iBT - English C2</li>
+						<li><strong>2023 - 2024:</strong> Exchange at Queen’s University</li>
+						<li><strong>2024 - 2027:</strong> RNCP 6 at Zone01 Rouen</li>
+						</ul>
+					</div>
+				
+					<div class="grid-section">
+						<h2>🖥️ Programming Languages</h2>
+						<div class="pill-grid">
+						<span class="pill">Go</span>
+						<span class="pill">JavaScript</span>
+						<span class="pill">HTML</span>
+						<span class="pill">CSS</span>
+						<span class="pill">Rust</span>
+						<span class="pill">Python</span>
+						<span class="pill">SQL</span>
+						<span class="pill">PostgreSQL</span>
+						</div>
+					</div>
+					<div class="grid-section">
+						<h2>🎨 Other Tools & Skills</h2>
+						<div class="pill-grid">
+						<span class="pill">Figma</span>
+						<span class="pill">Gimp</span>
+						<span class="pill">Notion</span>
+						<span class="pill">Canva</span>
+						<span class="pill">Markdown</span>
+						</div>
+					</div>
+					<div class="grid-section">
+						<h2>🛠️ Programming Tools</h2>
+						<div class="pill-grid">
+						<span class="pill">Git</span>
+						<span class="pill">VS Code</span>
+						<span class="pill">Astro</span>
+						<span class="pill">SQLite</span>
+						<span class="pill">Node.js</span>
+						</div>
+					</div>
+				</section>
 		</section>
 	</main>
 	<ContactCTA />
@@ -112,7 +125,7 @@ import Pill from '../components/Pill.astro';
 .hero-content {
 	position: relative;
 	z-index: 10;
-	color: var(--gray-0);
+	color: var(--gray-50);
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -153,29 +166,54 @@ import Pill from '../components/Pill.astro';
 	display: flex;
 	flex-direction: column;
 	gap: 5rem;
+	color: var(--gray-50);
+	font-size: 18px;
 }
 
-.content-block h2 {
-	font-size: var(--text-4xl);
-	margin-bottom: 1.5rem;
-	color: var(--gray-100);
-	text-align: center;
+.skills-box {
+  margin-top: 4rem;
+  padding: 3rem;
+  background: hsla(240, 53%, 19%, 0.7);
+  border: 1px solid var(--gray-100);
+  border-radius: 1.5rem;
+  box-shadow: var(--shadow-sm);
+  backdrop-filter: blur(6px);
+  color: var(--gray-100);
 }
 
-.content-block p,
-.content-block ul {
-	font-size: var(--text-md);
-	color: var(--gray-200);
-	line-height: 1.75;
-	text-align: center;
+.grid-box {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, auto);
+  gap: 2.5rem;
 }
 
-.content-block ul {
-	list-style: none;
-	padding: 0;
+.grid-section h2 {
+  font-size: var(--text-xl);
+  margin-bottom: 1rem;
+  color: var(--gray-0);
 }
 
-.content-block ul li {
-	margin-bottom: 1rem;
+.edu-list {
+  list-style: disc;
+  padding-left: 1.25rem;
+  font-size: var(--text-md);
+  color: var(--gray-50);
+}
+
+.pill-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.pill {
+  padding: 0.5rem 1rem;
+  background-color: rgba(157, 156, 158, 0.281);
+  border-radius: 999px;
+  font-size: var(--text-sm);
+  font-weight: 800;
+  color: var(--gray-100);
+  white-space: nowrap;
 }
 </style>

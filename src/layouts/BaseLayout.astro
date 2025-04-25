@@ -26,26 +26,17 @@ const { title, description } = Astro.props;
 		<style>
 			body {
 				margin: 0;
-				color: var(--gray-999);
+				color: rgba(253, 194, 203, 0.918);
 				font-weight: 600;
 			}
 
 			.backgrounds {
 				min-height: 100vh;
 				background: 
-					linear-gradient(rgba(139, 51, 197, 0.575), rgba(36, 33, 206, 0.644)),
-					url('/assets/backgrounds/veilpic.jpg') center/cover no-repeat;
+					linear-gradient(rgba(91, 57, 216, 0.329), rgba(36, 33, 206, 0.226)),
+					url('/assets/backgrounds/dz.jpg') center/cover no-repeat;
 				background-attachment: fixed;
 				backdrop-filter: blur(2px); /* optional: adds subtle polish */
-			}
-
-
-			@media (prefers-color-scheme: dark) {
-				.backgrounds {
-					background: 
-						linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-						url('/assets/backgrounds/my-background-dark.jpg') center/cover no-repeat;
-				}
 			}
 		</style>
 	</body>

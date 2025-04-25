@@ -3,13 +3,21 @@ import CallToAction from './CallToAction.astro';
 import Icon from './Icon.astro';
 ---
 
-<aside>
+<aside class="contact-box">
 	<h2>Interested in working together?</h2>
-	<CallToAction href="mailto:me@example.com">
-		Send Me a Message
+
+	<ul class="contact-info">
+		<li><strong>📧 Email : &nbsp</strong> <a href="mailto:athenais.klp@gmail.com">athenais.klp@gmail.com</a></li>
+		<li><strong>📱 Phone number : &nbsp</strong> <a href="tel:+33627240832">06 27 24 08 32</a></li>
+		<li><strong>🎂 Age : </strong> 19</li>
+	</ul>
+
+	<CallToAction href="mailto:athenais.klp@gmail.com">
+		Send me a message
 		<Icon icon="paper-plane-tilt" size="1.2em" />
 	</CallToAction>
 </aside>
+
 
 <style>
 	aside {

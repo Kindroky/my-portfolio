@@ -10,47 +10,34 @@ const { href } = Astro.props;
 
 <style>
 	a {
-		position: relative;
-		display: flex;
-		place-content: center;
-		text-align: center;
-		padding: 0.56em 2em;
-		gap: 0.8em;
-		color: var(--accent-text-over);
-		text-decoration: none;
-		line-height: 1.1;
-		border-radius: 999rem;
-		overflow: hidden;
-		background: var(--gradient-accent-orange);
-		box-shadow: var(--shadow-md);
-		white-space: nowrap;
-	}
+	position: relative;
+	display: flex;
+	place-content: center;
+	text-align: center;
+	padding: 0.56em 2em;
+	gap: 0.8em;
+	color: rgb(53, 14, 116);
+	text-decoration: none;
+	line-height: 1.1;
+	border-radius: 999rem;
+	overflow: hidden;
+	background: rgba(253, 194, 203, 0.918);
+	box-shadow: var(--shadow-md);
+	white-space: nowrap;
+	transition: background-color 0.4s ease, box-shadow 0.3s ease, color 0.3s ease;
+}
 
-	@media (min-width: 20em) {
-		a {
-			font-size: var(--text-lg);
-		}
+@media (min-width: 20em) {
+	a {
+		font-size: var(--text-lg);
 	}
+}
 
-	/* Overlay for hover effects. */
-	a::after {
-		content: '';
-		position: absolute;
-		inset: 0;
-		pointer-events: none;
-		transition: background-color var(--theme-transition);
-		mix-blend-mode: overlay;
-	}
+a:hover,
+a:focus {
+	background: rgba(247, 143, 166, 0.95); /* deeper pink */
+	box-shadow: 0 0.5em 1.2em rgba(247, 143, 166, 0.5); /* soft glow */
+	color: rgb(37, 7, 86); /* slightly darker text for contrast */
+}
 
-	a:focus::after,
-	a:hover::after {
-		background-color: hsla(var(--gray-999-basis), 0.3);
-	}
-
-	@media (min-width: 50em) {
-		a {
-			padding: 1.125rem 2.5rem;
-			font-size: var(--text-xl);
-		}
-	}
 </style>

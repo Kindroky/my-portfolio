@@ -24,7 +24,7 @@
 	--accent-subtle-overlay: hsla(262, 63%, 45%, 0.2);
 	--accent-text-over: var(--gray-999);
 
-	--link-color: var(--accent-regular);
+	--link-color: var(--gray-100);
 
 	/* Gradients */
 	--gradient-stop-1: var(--accent-light);
