@@ -1,6 +1,6 @@
 # Personal Portfolio 
 
-This is my personal developer portfolio, built with **[Astro](https://astro.build/)** — a lightning-fast static site builder focused on performance and simplicity.
+This is my personal developer portfolio, built with **[Astro](https://astro.build/)** —  a modern web framework that helps you build fast websites by combining the best parts of static and dynamic web development
 
 It’s designed to **go straight to the essential**, with clean design, smooth user experience, and just enough style to stand out.
 
@@ -8,7 +8,7 @@ It’s designed to **go straight to the essential**, with clean design, smooth u
 
 ## ✨ Key Features
 
-- ✅ Built with [Astro](https://astro.build/) -  a modern web framework that helps you build fast websites by combining the best parts of static and dynamic web development
+- ✅ Built with [Astro](https://astro.build/) 
 - 🎨 Custom design using HTML, CSS
 - ⚡ Fast-loading and responsive
 - 🧠 Components: Skills, Projects, About, Contact
