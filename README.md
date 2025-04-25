@@ -30,4 +30,4 @@ npm run dev
 
 ```
 
-##### Feel free to use my code for your portolfio or site ! 
+##### Feel free to use my code for your portfolio or site ! 
