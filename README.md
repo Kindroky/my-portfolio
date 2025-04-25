@@ -1,4 +1,4 @@
-# Personal Portfolio — Astro
+# Personal Portfolio 
 
 This is my personal developer portfolio, built with **[Astro](https://astro.build/)** — a lightning-fast static site builder focused on performance and simplicity.
 
