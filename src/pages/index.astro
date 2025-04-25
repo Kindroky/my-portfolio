@@ -363,12 +363,6 @@ const projects = (await getCollection('work'))
 		box-shadow: var(--shadow-sm);
 	}
 
-	@media (min-width: 50em) {
-		.mention-card {
-			border-radius: 1.5rem;
-			height: 9.5rem;
-		}
-	}
 	@media (max-width: 768px) {
 	.section {
 		display: flex;
@@ -377,7 +371,7 @@ const projects = (await getCollection('work'))
 	}
 
 	.stats-grid {
-		grid-template-columns: 1fr; /* 1 column for small screens */
+		grid-template-columns: 1fr;
 	}
 
 	.stat-number {
@@ -423,12 +417,33 @@ const projects = (await getCollection('work'))
 		margin-top: 1rem;
 		text-align: center;
 	}
+
+	/* ================= SKILLS FIX =================== */
+	.skills-box {
+		padding: 2rem 1.25rem;
 	}
-	@media (max-width: 768px) {
-		.pill {
-			font-size: 0.85rem;
-			padding: 0.4rem 0.75rem;
-		}
+
+	.grid-box {
+		display: flex;
+		flex-direction: column;
+		gap: 2rem;
 	}
+
+	.grid-section h2 {
+		font-size: 1.25rem;
+	}
+
+	.pill-grid {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.5rem;
+	}
+
+	.pill {
+		font-size: 0.85rem;
+		padding: 0.4rem 0.75rem;
+	}
+}
+
 
 </style>
