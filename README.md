@@ -8,8 +8,8 @@ It’s designed to **go straight to the essential**, with clean design, smooth u
 
 ## ✨ Key Features
 
-- ✅ Built with [Astro](https://astro.build/)
-- 🎨 Custom design using HTML, CSS (no frameworks)
+- ✅ Built with [Astro](https://astro.build/) -  a modern web framework that helps you build fast websites by combining the best parts of static and dynamic web development
+- 🎨 Custom design using HTML, CSS
 - ⚡ Fast-loading and responsive
 - 🧠 Components: Skills, Projects, About, Contact
 - 💬 Reusable `Icon`, `Hero`, `Pill`, and `Grid` components
