@@ -369,4 +369,66 @@ const projects = (await getCollection('work'))
 			height: 9.5rem;
 		}
 	}
+	@media (max-width: 768px) {
+	.section {
+		display: flex;
+		flex-direction: column;
+		gap: 3rem;
+	}
+
+	.stats-grid {
+		grid-template-columns: 1fr; /* 1 column for small screens */
+	}
+
+	.stat-number {
+		font-size: 2rem;
+	}
+
+	.stat-label {
+		font-size: 1rem;
+		text-align: center;
+		padding-inline: 1rem;
+	}
+
+	.roles {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: 0.5rem;
+	}
+
+	.image-wrapper {
+		width: 100%;
+		max-width: 320px;
+		height: auto;
+		margin-inline: auto;
+	}
+
+	.image-wrapper img,
+	.image-overlay {
+		height: auto;
+		border-radius: 2rem;
+	}
+
+	.section-header h3 {
+		font-size: 1.75rem;
+	}
+
+	.gallery {
+		padding-inline: 1rem;
+	}
+
+	.cta {
+		justify-self: center;
+		margin-top: 1rem;
+		text-align: center;
+	}
+	}
+	@media (max-width: 768px) {
+		.pill {
+			font-size: 0.85rem;
+			padding: 0.4rem 0.75rem;
+		}
+	}
+
 </style>

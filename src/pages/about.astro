@@ -91,6 +91,7 @@ import Pill from '../components/Pill.astro';
 					</div>
 				</section>
 		</section>
+		<br>
 	</main>
 	<ContactCTA />
 </BaseLayout>
@@ -220,4 +221,42 @@ import Pill from '../components/Pill.astro';
   color: var(--gray-100);
   white-space: nowrap;
 }
+
+@media (max-width: 768px) {
+  .grid-box {
+    grid-template-columns: 1fr;
+  }
+
+  .skills-box {
+    padding: 2rem 1.25rem;
+  }
+
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+
+  .about-container {
+    padding-inline: 1.25rem;
+    font-size: 1rem;
+  }
+
+  .pill {
+    font-size: 0.9rem;
+    padding: 0.4rem 0.8rem;
+  }
+
+  .grid-section h2 {
+    font-size: 1.25rem;
+  }
+
+  .edu-list {
+    padding-left: 1rem;
+  }
+}
+
 </style>
+
