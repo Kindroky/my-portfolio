@@ -9,7 +9,7 @@ interface Props {
 	size?: string;
 }
 
-const color = 'rgb(53, 14, 116)';
+const color = 'rgb(246, 198, 247)';
 const { gradient, icon, size } = Astro.props;
 const iconPath = iconPaths[icon];
 
@@ -53,5 +53,6 @@ const gradientId = 'icon-gradient-' + Math.round(Math.random() * 10e12).toString
 		vertical-align: middle;
 		width: var(--size, 1em);
 		height: var(--size, 1em);
+		min-width: var(--size, 1em); /* ensures alignment */
 	}
 </style>
