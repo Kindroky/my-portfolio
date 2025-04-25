@@ -314,26 +314,80 @@ const projects = (await getCollection('work'))
 		font-size: var(--text-2xl);
 	}
 
+	@media (min-width: 50em) {
+		.section {
+			grid-template-columns: repeat(4, 1fr);
+			grid-template-areas: 'header header header header' 'gallery gallery gallery gallery';
+			gap: 5rem;
+		}
+
+		.section.with-cta {
+			grid-template-areas: 'header header header cta' 'gallery gallery gallery gallery';
+		}
+
+		.section-header {
+			grid-area: header;
+			font-size: var(--text-lg);
+		}
+
+		.section-header h3 {
+			font-size: var(--text-4xl);
+		}
+
+		.with-cta .section-header {
+			justify-self: flex-start;
+			text-align: left;
+		}
+
+		.gallery {
+			grid-area: gallery;
+		}
+
+		.cta {
+			grid-area: cta;
+		}
+	}
+
+	/* ====================================================== */
+
+	.mention-card {
+		display: flex;
+		height: 7rem;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		border: 1px solid var(--gray-800);
+		border-radius: 1.5rem;
+		color: rgba(253, 194, 203, 0.918);
+		background: var(--gray-600);
+		box-shadow: var(--shadow-sm);
+	}
+
+	@media (min-width: 50em) {
+		.mention-card {
+			border-radius: 1.5rem;
+			height: 9.5rem;
+		}
+	}
 	@media (max-width: 768px) {
-	/* ===== General Layout Fixes ===== */
 	.section {
 		display: flex;
 		flex-direction: column;
 		gap: 3rem;
 	}
 
-	.gallery {
-		padding-inline: 1rem;
+	.stats-grid {
+		grid-template-columns: 1fr; /* 1 column for small screens */
 	}
 
-	.cta {
-		justify-self: center;
-		margin-top: 1rem;
+	.stat-number {
+		font-size: 2rem;
+	}
+
+	.stat-label {
+		font-size: 1rem;
 		text-align: center;
-	}
-
-	.section-header h3 {
-		font-size: 1.75rem;
+		padding-inline: 1rem;
 	}
 
 	.roles {
@@ -356,57 +410,25 @@ const projects = (await getCollection('work'))
 		border-radius: 2rem;
 	}
 
-
-	/* ===== Stats Section ===== */
-	.stats-grid {
-		grid-template-columns: 1fr;
+	.section-header h3 {
+		font-size: 1.75rem;
 	}
 
-	.stat-number {
-		font-size: 2rem;
-	}
-
-	.stat-label {
-		font-size: 1rem;
-		text-align: center;
+	.gallery {
 		padding-inline: 1rem;
 	}
 
-
-	/* ===== SKILLS SECTION ===== */
-	.skills-box {
-		padding: 2rem 1.25rem;
+	.cta {
+		justify-self: center;
+		margin-top: 1rem;
+		text-align: center;
 	}
-
-	.grid-box {
-		display: flex;
-		flex-direction: column;
-		gap: 2rem;
-	}
-
-	.grid-section h2 {
-		font-size: 1.25rem;
-	}
-
-	.pill-grid {
-		display: flex;
-		flex-wrap: wrap;
-		gap: 0.5rem;
-	}
-
+}
+@media (max-width: 768px) {
 	.pill {
 		font-size: 0.85rem;
 		padding: 0.4rem 0.75rem;
 	}
-
-	/* Optional: if you're using trait cards in a separate grid */
-	.traits-grid {
-		display: flex;
-		flex-direction: column;
-		gap: 1.5rem;
-		padding-inline: 1.25rem;
-	}
 }
-
 
 </style>
