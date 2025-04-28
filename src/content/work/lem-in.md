@@ -140,4 +140,4 @@ The output will show both the parsed input and the simulation steps as ants trav
 
 To explore the codebase or try it with different inputs, visit the full project:
 
-👉 **[View it on GitHub](https://github.com/Kindroky/lemin)**  
+👉 **[View it on GitHub](https://github.com/Kindroky/lem-in)**  

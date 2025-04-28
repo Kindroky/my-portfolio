@@ -28,6 +28,7 @@ const projects = (await getCollection('work'))
 <BaseLayout>
 	<div class="stack gap-20 lg:gap-48">
 		<div class="wrapper stack gap-8 lg:gap-20">
+			<br>
 			<header class="hero">
 				<Hero
 					title="Athénaïs Klapczynski"
@@ -43,16 +44,15 @@ const projects = (await getCollection('work'))
 				<div class="image-wrapper">
 					<div class="image-card">
 						<div class="image-front">
-							<p>I am a Full Stack Developer who is currently based in Rouen, France.</p>
-						</div>
-						<div class="image-back">
 							<img src="/assets/profpic.png" alt="Athénaïs" />
 							<div class="image-overlay"></div>
+						</div>
+						<div class="image-back">
+							<p>I am a Full Stack Developer who is currently based in Rouen, France.</p>
 						</div>
 					</div>
 				</div>				
 			</header>
-
 			<Skills />
 		</div>
 
@@ -200,7 +200,7 @@ const projects = (await getCollection('work'))
 		position: relative;
 		width: 100%;
 		max-width: 320px;
-		aspect-ratio: 9/8;
+		aspect-ratio: 10/8;
 		margin-inline: auto;
 		perspective: 1200px;
 	}
@@ -223,6 +223,10 @@ const projects = (await getCollection('work'))
 	}
 	
 	.image-front {
+		transform: rotateY(0deg); 
+	}
+	
+	.image-back {
 		background: rgba(1, 4, 34, 0.212);
 		border: 2px solid rgba(253, 194, 203, 0.7);
 		box-shadow: 0 0 20px rgba(253, 194, 203, 0.5);
@@ -234,10 +238,7 @@ const projects = (await getCollection('work'))
 		justify-content: center;
 		text-align: center;
 		padding: 1.5rem;
-	}
-	
-	.image-back {
-		transform: rotateY(180deg);
+		transform: rotateY(180deg); /* Hidden at start */
 	}
 	
 	.image-wrapper:hover .image-card {
