@@ -3,8 +3,6 @@ const ctx = canvas.getContext('2d');
 
 let width = window.innerWidth;
 let height = window.innerHeight;
-let hasMoved = false;
-let mouseActive = true;
 canvas.width = width;
 canvas.height = height;
 
@@ -15,26 +13,23 @@ window.addEventListener('resize', () => {
 	canvas.height = height;
 });
 
-// Trails for the cursor
 let trails = [];
 let lastMoveTime = 0;
-
-// Dust particles
+let mouseInside = false; 
+let movingRecently = false; 
 let particles = [];
 const particleCount = 500;
 const revealRadius = 350;
-
 let mouse = { x: width / 2, y: height / 2 };
 
-// Create particles
 for (let i = 0; i < particleCount; i++) {
 	particles.push({
 		x: Math.random() * width,
 		y: Math.random() * height,
-		dx: (Math.random() - 0.5) * 0.5,
-		dy: (Math.random() - 0.5) * 0.5,
+		dx: (Math.random() - 0.5) * 0.2,
+		dy: (Math.random() - 0.5) * 0.2,
 		size: Math.random() * 1.5 + 0.5,
-		alpha: 0 // ✨ start hidden
+		alpha: 0
 	});
 }
 
@@ -44,8 +39,8 @@ window.addEventListener('mousemove', (e) => {
 	mouse.y = e.clientY - rect.top;
 
 	lastMoveTime = Date.now();
-	hasMoved = true;
-	mouseActive = true;
+	movingRecently = true;
+	mouseInside = true;
 
 	trails.push({
 		x: mouse.x,
@@ -55,14 +50,12 @@ window.addEventListener('mousemove', (e) => {
 	});
 });
 
-// Detect if mouse leaves the screen
 window.addEventListener('mouseleave', () => {
-	mouseActive = false;
+	mouseInside = false;
 });
 
-// Detect if mouse re-enters
 window.addEventListener('mouseenter', () => {
-	mouseActive = true;
+	mouseInside = true;
 });
 
 function drawParticles() {
@@ -80,15 +73,23 @@ function drawParticles() {
 		const dx = p.x - mouse.x;
 		const dy = p.y - mouse.y;
 		const dist = Math.sqrt(dx * dx + dy * dy);
-
-		// Increase alpha when near mouse
-		if (dist < revealRadius) {
-			p.alpha += 0.06; // reveal faster
-			if (p.alpha > 1) p.alpha = 1;
-		} else {
-			p.alpha -= 0.03; // fade back slowly
-			if (p.alpha < 0) p.alpha = 0;
-		}
+        if (mouseInside) {
+            if (movingRecently) {
+                if (dist < revealRadius) {
+                    p.alpha += 0.05;
+                    if (p.alpha > 1) p.alpha = 1;
+                } else {
+                    p.alpha -= 0.05;
+                    if (p.alpha < 0) p.alpha = 0;
+                }
+            } else {
+                p.alpha -= 0.035;
+                if (p.alpha < 0) p.alpha = 0;
+            }
+        } else {
+            p.alpha -= 0.02;
+            if (p.alpha < 0) p.alpha = 0;
+        }        
 
 		ctx.fillStyle = `rgba(255, 255, 255, ${p.alpha})`;
 		ctx.beginPath();
@@ -126,7 +127,7 @@ function draw() {
 
 	drawParticles();
 
-	if (mouseActive) {
+	if (mouseInside || trails.length > 0) { 
 		drawTrails();
 	}
 }
@@ -134,15 +135,11 @@ function draw() {
 function animate() {
 	draw();
 
-	if (hasMoved && mouseActive && Date.now() - lastMoveTime > 30) {
-		trails.push({
-			x: mouse.x,
-			y: mouse.y,
-			alpha: 1,
-			size: 20
-		});
-		lastMoveTime = Date.now();
-	}
+	const now = Date.now();
+	// If not moved for 1000ms, we stop revealing
+    if (now - lastMoveTime > 800) {
+        movingRecently = false;
+    }
 
 	requestAnimationFrame(animate);
 }
