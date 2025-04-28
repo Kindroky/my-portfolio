@@ -12,7 +12,7 @@ tags:
   - backend
 ---
 
-# Real-Time Forum 
+#### Real-Time Forum 
 
 **Real-Time Forum** is a lightweight but meaningful project built to experiment with real-time web communication using WebSockets. It marked my very first implementation of real-time interactions, and helped me understand how messaging systems and live updates can be synchronized between users on a web platform.
 
@@ -20,7 +20,7 @@ There is no elaborate visual theme or complex structure — the focus was purely
 
 ---
 
-## 🧠 Project Overview
+#### 🧠 Project Overview
 
 This forum allowed multiple users to:
 
@@ -36,19 +36,15 @@ All of this was made possible by using Go's WebSocket support to manage bi-direc
 
 ---
 
-## 💬 Key Features
+#### 💬 Key Features
 
-##### 🟢 Live Messaging
+- 🟢 Live Messaging: Messages sent by any connected user are broadcast to all others in real time.
 
-Messages sent by any connected user are broadcast to all others in real time.
-
-##### ✍️ Typing Indicators
-
-The system detects when a user is actively typing and displays a “typing...” status to others — simulating a feature present in modern chat apps.
+- ✍️ Typing Indicators: The system detects when a user is actively typing and displays a “typing...” status to others — simulating a feature present in modern chat apps.
 
 ---
 
-## 🧪 First Real-Time Experiment
+#### 🧪 First Real-Time Experiment
 
 This was my first real use of:
 
@@ -61,7 +57,7 @@ It helped me better understand asynchronous communication models and event-based
 
 ---
 
-## 🚀 How to Use
+#### 🚀 How to Use
 
 To run the project locally:
 
@@ -81,7 +77,7 @@ You can open multiple browser tabs or windows to simulate different users chatti
 
 ---
 
-## 🔧 Technical Highlights
+#### 🔧 Technical Highlights
 
 - **Backend**: Go with the `net/http` and `gorilla/websocket` packages
 - **Frontend**: HTML and JS to send and receive socket events
@@ -89,7 +85,7 @@ You can open multiple browser tabs or windows to simulate different users chatti
 
 ---
 
-## Conclusion
+#### Conclusion
 
 **Real-Time Forum** was a key learning milestone in understanding how real-time web applications work. It introduced me to WebSockets, message synchronization, and live UI updates — concepts that are foundational for any chat system or collaborative application.
 
