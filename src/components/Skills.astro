@@ -3,131 +3,121 @@
 import Icon from './Icon.astro';
 ---
 
-<section class="box skills">
-	<div class="skill-item zig-up">
+<section class="skills">
+	<div class="skill-item">
 		<div class="skill-title">
 			<Icon icon="sun" color="rgb(173, 216, 230)" size="3rem" />
 			<h2>Strong-willed</h2>
 		</div>
-		<p>
-			I find meaning in difficulty. What matters most to me is facing adversity with dignity — and keeping a piece of it with me.
-	</p>
-		</p>
+		<p>I find meaning in difficulty. What matters most to me is facing adversity with dignity — and keeping a piece of it with me.</p>
 	</div>
 
-	<div class="skill-item zig-down">
+	<div class="skill-item">
 		<div class="skill-title">
 			<Icon icon="pencil-line" color="rgb(173, 216, 230)" size="3rem" />
 			<h2>Creative Thinker</h2>
 		</div>
-		<p>
-			I enjoy connecting ideas in unexpected ways. Whether I’m designing, coding, or just exploring a concept, I try to see things from different angles.
-	</p>
-		</p>
+		<p>I enjoy connecting ideas in unexpected ways. Whether I’m designing, coding, or exploring a concept, I try to see things from a different angle.</p>
 	</div>
 
-	<div class="skill-item zig-up">
+	<div class="skill-item">
 		<div class="skill-title">
 			<Icon icon="strategy" color="rgb(173, 216, 230)" size="3rem" />
 			<h2>Problem Solver</h2>
 		</div>
-		<p>
-			When something doesn’t work, I don’t get discouraged — I get curious. I take time to understand the problem, and look for honest, simple answers.
-		</p>
+		<p>When something doesn’t work, I don’t get discouraged — I get curious. I take time to understand problems honestly.</p>
 	</div>
 
-	<div class="skill-item zig-down">
+	<div class="skill-item">
 		<div class="skill-title">
 			<Icon icon="rocket-launch" color="rgb(173, 216, 230)" size="3rem" />
 			<h2>Curious</h2>
 		</div>
-		<p>
-			I’m naturally curious, always looking to learn. Growth comes from staying open-minded, and showing up — even when it’s hard.
-		</p>
+		<p>I’m naturally curious, always looking to learn. Growth comes from staying open-minded and showing up, even when it’s hard.</p>
 	</div>
 </section>
 
+
 <style>
-.box {
-	border: 1px solid var(--gray-100);
-	border-radius: 1.5rem;
-	padding: 2.5rem;
-	background-color: hsla(240, 53%, 19%, 0.7);
-	box-shadow: var(--shadow-sm);
-	backdrop-filter: blur(6px);
-}
 
 .skills {
 	display: grid;
-	grid-template-columns: repeat(4, 1fr);
+	grid-template-columns: 1fr;
 	gap: 2rem;
 }
 
 .skill-item {
-	margin: 0;
-	flex-grow: 1;
-	max-width: 28ch;
-	justify-content: flex-start;
-	align-items: flex-start;
-	gap: 1rem;
-	height: 100%; /* ensures equal height grid cells */
+	position: relative;
+	background: rgba(10, 10, 30, 0.7);
+	border: 1px solid rgba(253, 194, 203, 0.4);
+	border-radius: 1.5rem;
+	overflow: hidden;
+	padding: 2rem;
+	text-align: center;
+	cursor: pointer;
+	transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
 .skill-title {
 	display: flex;
+	flex-direction: column;
 	align-items: center;
+	justify-content: center;
 	gap: 0.75rem;
-	padding-bottom: 0.5rem;	
-	min-height: 3rem; /* ensures all rows reserve same height for title+icon */
+	color: rgba(253, 194, 203, 0.918);
+	font-size: 1.2rem;
+	transition: transform 0.4s ease;
 }
 
 .skill-title h2 {
-	font-size: var(--text-xl);
-	color: rgba(253, 194, 203, 0.918);
 	margin: 0;
+	font-size: 1.5rem;
 }
 
-.skills p {
-	color: var(--gray-100);
-	font-size: var(--text-md);
-	line-height: 1.6;
+.skill-item p {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	padding: 1rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	color: rgba(253, 194, 203, 0.9); /* pink readable text */
+	background: rgba(10, 10, 30, 0.95); /* darker background */
+	font-size: 1.1rem;
+	line-height: 1.5;
+	border-radius: 1.5rem;
+	transform: translateY(0);
+	opacity: 0;
+	transition: opacity 0.4s ease;
+	z-index: 2; /* bring text above */
 }
 
-/* Zigzag effect */
-.zig-up {
-	transform: translateY(22px);
+/* When you hover, text appears */
+.skill-item:hover p {
+	opacity: 1;
 }
 
-.zig-down {
-	transform: translateY(-22px);
+
+/* Hover effect */
+.skill-item:hover {
+	transform: translateY(-5px);
+	box-shadow: 0 0 20px rgba(253, 194, 203, 0.5);
 }
 
-@media (max-width: 768px) {
+.skill-item:hover .skill-title {
+	transform: translateY(-2rem);
+}
+
+/* Desktop version */
+@media (min-width: 768px) {
 	.skills {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		gap: 2rem;
-	}
-
-	.skill-item {
-		max-width: 100%;
-		width: 100%;
-	}
-
-	.skill-title h2 {
-		font-size: 1.25rem;
-	}
-
-	.skills p {
-		font-size: 0.95rem;
-		text-align: center;
-	}
-
-	.zig-up,
-	.zig-down {
-		transform: none;
+		grid-template-columns: repeat(4, 1fr);
 	}
 }
+
 
 </style>
