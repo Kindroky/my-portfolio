@@ -122,4 +122,4 @@ Perfect for practicing Go, understanding APIs, and building interactive interfac
 
 For more details:
 
-👉 **[Visit the GitHub project to explore the code and run it yourself](https://github.com/Kindroky/tetris-optimizer)**
+👉 **[Visit the GitHub project to explore the code and run it yourself](https://github.com/Kindroky/groupie-tracker)**

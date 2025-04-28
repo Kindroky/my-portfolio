@@ -140,4 +140,4 @@ The output will show both the parsed input and the simulation steps as ants trav
 
 To see more :
 
-👉 **[Visit the GitHub project to explore the code and run it yourself](https://github.com/Kindroky/tetris-optimizer)**
+👉 **[Visit the GitHub project to explore the code and run it yourself](https://github.com/Kindroky/lem-in)**

@@ -98,4 +98,4 @@ It’s a compact, educational, and fun introduction to network systems.
 
 For more details:
 
-👉 **[Visit the GitHub project to explore the code and run it yourself](https://github.com/Kindroky/tetris-optimizer)**
+👉 **[Visit the GitHub project to explore the code and run it yourself](https://github.com/Kindroky/net-cat)**
