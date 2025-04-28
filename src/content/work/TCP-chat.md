@@ -9,13 +9,13 @@ tags:
   - Backend
   - Networking
 ---
-# TCP Chat Server in Go
+#### TCP Chat Server in Go
 
 **Netcat-style TCP chat server** in Go. This project enables multiple clients to connect, send messages, and interact in real time, using Go's standard networking libraries.
 
 ---
 
-## 👾 Welcome Screen
+#### 👾 Welcome Screen
 
 ```txt
 Welcome to TCP-Chat!
@@ -39,7 +39,7 @@ _)      \.___.,|     .'
 
 ---
 
-## 🔧 Features
+#### 🔧 Features
 
 - **Netcat-Style Interface**: Command-line interaction over TCP, mimicking the classic Netcat behavior.
 - **Real-Time Messaging**: Broadcasts sent messages to all connected users instantly.
@@ -53,7 +53,7 @@ _)      \.___.,|     .'
 
 ---
 
-### Start the Server
+#### Start the Server
 
 Launch your chat server with a specific port:
 
@@ -61,7 +61,7 @@ Launch your chat server with a specific port:
 go run . 2525
 ```
 
-### Connect a Client
+#### Connect a Client
 
 In another terminal window, use Netcat to connect to the chat server:
 
@@ -69,19 +69,18 @@ In another terminal window, use Netcat to connect to the chat server:
 nc localhost 2525
 ```
 
-### Connect Over Network
+#### Connect Over Network
 
 If using multiple devices on the same Wi-Fi, replace `localhost` with the host machine's IP:
 
 ```bash
 nc [IP_ADDRESS] 2525
 ```
-
-> All devices must be on the same local network.
+ All devices must be on the same local network.
 
 ---
 
-## 🧠 Why Build This?
+#### 🧠 Why Build This?
 
 This project is perfect for learning:
 
@@ -95,7 +94,7 @@ It’s a compact, educational, and fun introduction to network systems.
 
 ---
 
-## 🔗 Explore the Code
+#### 🔗 Explore the Code
 
 For more details, usage examples, and the full codebase, visit:
 

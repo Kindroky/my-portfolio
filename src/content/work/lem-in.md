@@ -10,7 +10,7 @@ tags:
   - Backend
 ---
 
-# Lem-in 
+#### Lem-in 
 
 **Lem-in** is a Go-based project that simulates the movement of ants through a colony of rooms and tunnels. Each ant must travel from a designated start room to an end room using the most efficient path possible.
 
@@ -18,13 +18,13 @@ This is one of my early projects focused on pathfinding, simulation logic, and i
 
 ---
 
-## 🐜 How It Works
+#### 🐜 How It Works
 
 Lem-in reads an input file that describes the ant colony. This includes the number of ants, the layout of rooms, tunnel connections, and start/end points. The program then calculates how to move all ants from **##start** to **##end** in the fewest number of turns.
 
 ---
 
-## 📄 Sample Input Format
+#### 📄 Sample Input Format
 
 ```txt
 4
@@ -43,7 +43,7 @@ Each line either defines ants, rooms, or tunnels. Special markers like `##start`
 
 ---
 
-## 🖥 Example Execution
+#### 🖥 Example Execution
 
 ```bash
 go run . example00.txt
@@ -75,14 +75,14 @@ Each `Lx-y` represents an ant (x) moving to room (y). The program batches ant mo
 
 ---
 
-## ✨ Features
+#### ✨ Features
 
-### 🔍 Shortest Path Calculation
+#### 🔍 Shortest Path Calculation
 
 - Efficiently routes ants through the colony
 - Handles multiple paths and ensures optimal distribution
 
-### ✅ Input Validation
+#### ✅ Input Validation
 
 The program returns **explicit error messages** for invalid scenarios:
 
@@ -98,7 +98,7 @@ ERROR: invalid data format, no start room found
 ERROR: invalid data format, invalid number of Ants
 ```
 
-### 🧠 Robust Simulation Logic
+#### 🧠 Robust Simulation Logic
 
 Handles edge cases like:
 
@@ -108,7 +108,7 @@ Handles edge cases like:
 
 ---
 
-## 🚀 Usage
+#### 🚀 Usage
 
 Run the simulation with:
 
@@ -126,7 +126,7 @@ The output will show both the parsed input and the simulation steps as ants trav
 
 ---
 
-## 🔑 Key Takeaways
+#### 🔑 Key Takeaways
 
 - The **shortest path is not always the most efficient** path
 - Some colonies contain no valid route between `##start` and `##end`
@@ -134,7 +134,7 @@ The output will show both the parsed input and the simulation steps as ants trav
 
 ---
 
-## Conclusion
+#### Conclusion
 
 **Lem-in** is one of my foundational algorithmic projects and one of the most complicated. It helped me understand how to turn structured input into an optimized simulation, with a strong focus on correctness, edge-case handling, and readability.
 

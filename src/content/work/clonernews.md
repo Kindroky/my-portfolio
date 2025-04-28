@@ -9,7 +9,7 @@ tags:
   - Data
   - Frontend
 ---
-# HackerNews UI 
+#### HackerNews UI 
 
 **HackerNews UI** is a frontend project designed to provide a smooth and real-time browsing experience for HackerNews content. From live stories to deep comment threads, this app dynamically displays the latest updates from the HackerNews API with performance in mind.
 
@@ -17,7 +17,7 @@ This was one of my first frontend-focused projects and helped me practice asynch
 
 ---
 
-## 🔍 Project Overview
+#### 🔍 Project Overview
 
 The goal of HackerNews UI is to give users an efficient and interactive way to browse HackerNews categories like:
 
@@ -31,7 +31,7 @@ Everything is fetched from the HackerNews public API and rendered in a user-frie
 
 ---
 
-## ✨ Key Features
+#### ✨ Key Features
 
 ##### 📰 Real-Time Post Rendering
 
@@ -53,16 +53,16 @@ Everything is fetched from the HackerNews public API and rendered in a user-frie
 
 ---
 
-## 🚀 Getting Started
+#### 🚀 Getting Started
 
-### Clone the Repository
+##### Clone the Repository
 
 ```bash
 git clone https://github.com/Kindroky/clonernews
 cd clonernews
 ```
 
-### Run the App
+##### Run the App
 
 1. Start the development server (e.g. with the "Go Live" button in VSCode)
 2. Open your browser at:
@@ -75,7 +75,7 @@ The interface will begin fetching and displaying live HackerNews content immedia
 
 ---
 
-## 🔑 Learning Outcomes
+#### 🔑 Learning Outcomes
 
 Through this project, I practiced:
 
@@ -87,7 +87,7 @@ Through this project, I practiced:
 
 ---
 
-## Conclusion
+#### Conclusion
 
 **HackerNews UI** is a lightweight but efficient frontend application built for live data handling and smooth content rendering. It reflects my early steps in UI development and it is my very first project in javascript made right after my javascript bootcamp. If you launch it, you can find some really interesting articles to read!
 

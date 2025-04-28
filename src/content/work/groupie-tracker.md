@@ -11,7 +11,7 @@ tags:
   - Web
 ---
 
-# Groupie Tracker — Visualize Band Tours and Data with Go
+#### Groupie Tracker — Visualize Band Tours and Data with Go
 
 **Groupie Tracker** is a full stack web application built to turn raw artist and tour data into a beautiful and intuitive interface. The app connects to an external API that provides information about musical artists, their concert locations, and historical data, and presents it with dynamic client-server interactions.
 
@@ -19,7 +19,7 @@ Designed with both performance and clarity in mind, Groupie Tracker brings toget
 
 ---
 
-## 📊 Project Overview
+#### 📊 Project Overview
 
 The core objective of **Groupie Tracker** is to make musical data easy to explore and engaging to interact with. It achieves this by providing:
 
@@ -30,7 +30,7 @@ The core objective of **Groupie Tracker** is to make musical data easy to explor
 
 ---
 
-## 🔗 The API Architecture
+#### 🔗 The API Architecture
 
 The project is structured around four key API endpoints:
 
@@ -41,31 +41,31 @@ The project is structured around four key API endpoints:
 
 ---
 
-## 🌟 Key Features
+#### 🌟 Key Features
 
-### 🎨 Data Visualization
+#### 🎨 Data Visualization
 
 - Cleanly presented artist profiles
 - Cards, tables, and other UI components to display relationships between bands, tours, and dates
 
-### 💬 Interactive Client Experience
+#### 💬 Interactive Client Experience
 
 - Users interact with buttons or filters that trigger requests to the Go server
 - Data is fetched or updated in real time, keeping the UI responsive and fluid
 
-### 🛠 Go Backend
+#### 🛠 Go Backend
 
 - Entire server-side logic is built with Go’s standard library
 - Handles data parsing, routing, error handling, and client requests efficiently
 
-### ⚙️ Error Handling
+#### ⚙️ Error Handling
 
 - Designed to avoid crashes with robust fallback behavior
 - Ensures reliability across all user actions
 
 ---
 
-## 🧪 Technical Stack
+#### 🧪 Technical Stack
 
 - **Backend**: Go (Golang), with no external packages
 - **Frontend**: HTML/CSS and vanilla JavaScript
@@ -74,7 +74,7 @@ The project is structured around four key API endpoints:
 
 ---
 
-## 🎓 Learning Outcomes
+#### 🎓 Learning Outcomes
 
 Working on this project has reinforced skills in:
 
@@ -88,7 +88,7 @@ Working on this project has reinforced skills in:
 
 ---
 
-## 🚀 How It Works
+#### 🚀 How It Works
 
 1. The Go server launches and connects to the API.
 2. Artist and tour data are parsed and stored in memory.
@@ -97,7 +97,7 @@ Working on this project has reinforced skills in:
 
 ---
 
-## 🖥 Setup and Run
+#### 🖥 Setup and Run
 
 1. Clone the repository locally.
 2. Make sure Go is installed.
@@ -111,14 +111,14 @@ go run .
 
 ---
 
-## Conclusion
+#### Conclusion
 
 **Groupie Tracker** was one of my very first projects in golang. It's a fully functional exploration into API-driven application design. Built with precision and care, it transforms structured data into a fun, clear, and usable product.
 
 Perfect for practicing Go, understanding APIs, and building interactive interfaces without relying on heavy frameworks.
 
 
-## 🔗 Explore the Code
+#### 🔗 Explore the Code
 
 For more details, usage examples, and the full codebase, visit:
 
