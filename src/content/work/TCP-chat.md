@@ -96,6 +96,6 @@ It’s a compact, educational, and fun introduction to network systems.
 
 #### 🔗 Explore the Code
 
-For more details, usage examples, and the full codebase, visit:
+For more details:
 
-👉 **[github.com/Kindroky/net-cat](https://github.com/Kindroky/net-cat)**
+👉 **[Visit the GitHub project to explore the code and run it yourself](https://github.com/Kindroky/tetris-optimizer)**

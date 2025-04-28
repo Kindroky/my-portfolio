@@ -138,6 +138,6 @@ The output will show both the parsed input and the simulation steps as ants trav
 
 **Lem-in** is one of my foundational algorithmic projects and one of the most complicated. It helped me understand how to turn structured input into an optimized simulation, with a strong focus on correctness, edge-case handling, and readability.
 
-To explore the codebase or try it with different inputs, visit the full project:
+To see more :
 
-👉 **[View it on GitHub](https://github.com/Kindroky/lem-in)**  
+👉 **[Visit the GitHub project to explore the code and run it yourself](https://github.com/Kindroky/tetris-optimizer)**

@@ -89,4 +89,4 @@ You can open multiple browser tabs or windows to simulate different users chatti
 
 **Real-Time Forum** was a key learning milestone in understanding how real-time web applications work. It introduced me to WebSockets, message synchronization, and live UI updates — concepts that are foundational for any chat system or collaborative application.
 
-👉 **[Visit the GitHub repository to view the code](https://github.com/ToniKorhonen/real-time-forum)**
+👉 **[Visit the GitHub project to explore the code and run it yourself](https://github.com/Kindroky/tetris-optimizer)**
