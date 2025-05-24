@@ -1,6 +1,5 @@
 ---
 import type { CollectionEntry } from 'astro:content';
-
 interface Props {
 	project: CollectionEntry<'work'>;
 }
@@ -9,7 +8,7 @@ const { data, id } = Astro.props.project;
 ---
 
 <a class="card" href={`/work/${id}`}>
-	<img src={data.img} alt={data.img_alt || ''} loading="lazy" decoding="async" />
+	<img src={data.img} alt={data.img_alt || ''} decoding="async" />
 	<div class="title-bar">
 		<span class="title">{data.title}</span>
 	</div>
@@ -88,6 +87,7 @@ const { data, id } = Astro.props.project;
 		font-size: 2rem;
 		transform: translateY(-2px);
 	}
+	
 
 	@media (min-width: 50em) {
 		.card {
@@ -96,3 +96,4 @@ const { data, id } = Astro.props.project;
 		}
 	}
 </style>
+
